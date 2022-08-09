@@ -1,0 +1,167 @@
+package mensurationCalculator;
+import java.util.*;
+public class MensurationCalculator {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("1.2D shapes");
+		System.out.println("2.3D shapes");
+		System.out.println("Enter a number:");
+		int a=sc.nextInt();
+		if(a==1){
+			
+			System.out.println("1.Square");
+			System.out.println("2.Rectangle");
+			System.out.println("3.Circle");
+			System.out.println("4.Right Angle Triangle");
+			System.out.println("Enter a number:");	
+			int a1=sc.nextInt();
+			
+			System.out.println("1.Area");
+			System.out.println("2.perimeter");
+			System.out.println("Enter a number:");
+			int a2=sc.nextInt();
+			
+			if(a1==1){
+				
+				System.out.println("Enter side");
+				double b1=sc.nextDouble();
+				if(a2==1){
+					System.out.println("Area of square: "+(b1*b1));
+				}
+				if(a2==2){
+					System.out.println("Perimeter of square: "+(4*b1));
+					
+				}
+			}
+			else if(a1==2){
+				System.out.println("Enter length & breadth: ");
+				double l=sc.nextDouble();
+				double b=sc.nextDouble();
+				if(a2==1){
+					System.out.println("Area of Rectangle: "+(l*b));
+				}
+				if(a2==2){
+					System.out.println("Perimeter of Rectangle: "+(2*(l+b)));
+				}
+			}
+			else if(a1==3){
+				System.out.println("Enter radius");
+				double r=sc.nextDouble();
+				if(a2==1){
+				System.out.println("Area of circle: "+(3.14*r*r));
+				}
+				if(a2==2){
+					System.out.println("Perimeter of circle: "+(3.14*r*2));
+				}
+			}
+			else if(a1==4){
+				if(a2==1){
+				System.out.println("Enter base, height");
+				double b=sc.nextDouble();
+				double h=sc.nextDouble();
+				System.out.println("Area of Triangle: "+(0.5*b*h));
+				}
+				if(a2==2){
+					System.out.println("Enter base, height and hypotenuse: ");
+					double b=sc.nextDouble();
+					double h=sc.nextDouble();
+					double hyp=sc.nextDouble();
+					System.out.println("Perimeter of Triangle: "+(h+b+hyp));
+				}
+			}
+		}
+		if(a==2){
+			System.out.println("1.cube");
+			System.out.println("2.cuboid");
+			System.out.println("3.sphere");
+			System.out.println("4.cylinder");
+			System.out.println("5.cone");
+			System.out.println("Enter a number:");	
+			int a1=sc.nextInt();
+			
+			System.out.println("1.Volume");
+			System.out.println("2.Curved Surface Area");
+			System.out.println("3.Total Surface Area");
+			System.out.println("Enter a number:");
+			int a2=sc.nextInt();
+			
+			if(a1==1){
+				
+				System.out.println("Enter side ");
+				double b1=sc.nextDouble();
+				if(a2==1){
+					System.out.println("Volume of cube: "+(b1*b1*b1));
+				}
+				if(a2==2){
+					System.out.println("CSA of cube: "+(4*b1*b1));				
+				}
+				if(a2==3){
+					System.out.println("TSA of cube: "+(6*b1*b1));
+					
+				}
+			}
+			else if(a1==2){
+				System.out.println("Enter length, breadth & height : ");
+				double l=sc.nextDouble();
+				double b=sc.nextDouble();
+				double h=sc.nextDouble();
+				if(a2==1){
+					System.out.println("Volume of cuboid: "+(l*b*h));
+				}
+				if(a2==2){
+					System.out.println("CSA of cuboid: "+(2*h*(l+b)));
+				}
+				if(a2==3){
+					System.out.println("TSA of cuboid: "+(2*((l*b)+(b*h)+(h*l))));
+				}
+			}
+			else if(a1==3){
+				System.out.println("Enter radius");
+				double r=sc.nextDouble();
+				if(a2==1){
+				System.out.println("Volume of sphere: "+(1.33333*3.14*r*r*r));
+				}
+				if(a2==2|| a2==3){
+					System.out.println("CSA and TSA of sphere : "+(4*3.14*r*2));
+				}
+			}
+			else if(a1==4){
+				System.out.println("Enter radius, height");
+				double r=sc.nextDouble();
+				double h=sc.nextDouble();
+				if(a2==1){
+				
+				System.out.println("Volume of Cylinder: "+(3.14*r*r*h));
+				}
+				if(a2==2){
+					System.out.println("CSA of Cylinder: "+(2*r*3.14*h));
+				}
+				if(a2==3){
+					System.out.println("TSA of Cylinder: "+((2*r*3.14*h)+(2*3.14*r*r)));
+				}
+			}
+			else if(a1==5){
+				  if(a2==1){
+					  System.out.println("Enter radius, height");
+						double r=sc.nextDouble();
+						double h=sc.nextDouble();
+					System.out.println("Volume of Cone: "+(3.14*r*r*h*0.33333));
+					}
+					if(a2==2){
+						System.out.println("Enter radius,length");
+						double r=sc.nextDouble();
+						double l=sc.nextDouble();
+						System.out.println("CSA of Cone: "+(l*r*3.14));
+					}
+					if(a2==3){
+						System.out.println("Enter radius,length");
+						double r=sc.nextDouble();
+						double l=sc.nextDouble();
+						System.out.println("TSA of Cylinder: "+(3.14*r*(r+l)));
+					}
+			}
+		}
+	}
+}
